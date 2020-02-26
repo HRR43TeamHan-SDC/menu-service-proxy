@@ -1,0 +1,48 @@
+config:
+  target: 'http://localhost:8080'
+  phases:
+    - duration: 30
+      arrivalRate: 100
+    - duration: 120
+      arrivalRate: 5
+      rampTo: 20000
+  defaults:
+    headers:
+      x-my-service-auth: '987401838271002188298567'
+  variables:
+      id:
+        - "10"
+        - "100"
+        - "1000"
+        - "10000"
+        - "100000"
+        - "1000000"
+        - "10000000"
+        - "50"
+        - "500"
+        - "5000"
+        - "50000"
+        - "500000"
+        - "5000000"
+scenarios:
+  - flow:
+    - get:
+        url: "/getmenu/{{id}}"
+
+#         All virtual users finished
+# Summary report @ 19:46:58(-0600) 2020-02-21
+#   Scenarios launched:  31296
+#   Scenarios completed: 31296
+#   Requests completed:  438144
+#   RPS sent: 985.66
+#   Request latency:
+#     min: 0.6
+#     max: 146.1
+#     median: 14.3
+#     p95: 26.6
+#     p99: 36.8
+#   Scenario counts:
+#     0: 31296 (100%)
+#   Codes:
+#     200: 219072
+#     301: 219072

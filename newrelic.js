@@ -10,11 +10,11 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name: ['My Application'],
+  app_name: ['SDC PROXY'],
   /**
    * Your New Relic license key.
    */
-  license_key: `${NEW_RELIC_LICENSE}`,
+  license_key: process.env.NEW_RELIC_LICENSE,
   logging: {
     /**
      * Level at which to log. 'trace' is most useful to New Relic when diagnosing
