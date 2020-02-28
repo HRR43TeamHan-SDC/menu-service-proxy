@@ -17,7 +17,7 @@ body {
 .grid-header {
   grid-area: header;
   height: 371px;
-  background-image: url('images/header.png');
+  background-image: url('images/header.webp');
 }
 .grid-left-gutter {
   grid-area : lgutter;
@@ -40,11 +40,11 @@ body {
 .grid-footer {
   grid-area: footer;
   height: 795px;
-  background-image: url('images/footer.png');
+  background-image: url('images/footer.webp');
 }
 .area-description {
   height:255px;
-  background-image: url('images/description.png');
+  background-image: url('images/description.webp');
   background-repeat: no-repeat;
 }
 .area-menu {
@@ -64,18 +64,18 @@ body {
 .area-map {
   width: 320px;
   height: 220px;
-  background-image: url('images/map.png');
+  background-image: url('images/map.webp');
   margin-top: 20px;
 }
 .area-detail1 {
   width: 320px;
   height: 643px;
-  background-image: url('images/detail1.png');
+  background-image: url('images/detail1.webp');
   background-repeat: no-repeat;
 }
 .area-detail2 {
   width: 320px;
   height: 182px;
-  background-image: url('images/detail2.png');
+  background-image: url('images/detail2.webp');
   background-repeat: no-repeat
 }

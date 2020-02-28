@@ -43,7 +43,7 @@ html = `
     .grid-header {
       grid-area: header;
       height: 371px;
-      background-image: url('images/header.png');
+      background-image: url('images/header.webp');
     }
     .grid-left-gutter {
       grid-area : lgutter;
@@ -66,11 +66,11 @@ html = `
     .grid-footer {
       grid-area: footer;
       height: 795px;
-      background-image: url('images/footer.png');
+      background-image: url('images/footer.webp');
     }
     .area-description {
       height:255px;
-      background-image: url('images/description.png');
+      background-image: url('images/description.webp');
       background-repeat: no-repeat;
     }
     .area-menu {
@@ -90,19 +90,19 @@ html = `
     .area-map {
       width: 320px;
       height: 220px;
-      background-image: url('images/map.png');
+      background-image: url('images/map.webp');
       margin-top: 20px;
     }
     .area-detail1 {
       width: 320px;
       height: 643px;
-      background-image: url('images/detail1.png');
+      background-image: url('images/detail1.webp');
       background-repeat: no-repeat;
     }
     .area-detail2 {
       width: 320px;
       height: 182px;
-      background-image: url('images/detail2.png');
+      background-image: url('images/detail2.webp');
       background-repeat: no-repeat
     }
     </style>
@@ -136,7 +136,6 @@ html = `
 </html>
 `
 
-
 app.get('/gettitle/:id', (req, res) => {
   res.redirect(`http://${MENUS_HOST}:${MENUS_PORT}${req.url}`);
 });
@@ -144,7 +143,6 @@ app.get('/gettitle/:id', (req, res) => {
 app.get('/getmenu/:id', (req, res) => {
   res.redirect(`http://${MENUS_HOST}:${MENUS_PORT}${req.url}`);
 });
-
 
 app.post('/api/restaurant', (req, res) => {
   res.redirect(307, `http://${MENUS_HOST}:${MENUS_PORT}${req.url}`);
@@ -232,7 +230,7 @@ app.route('/api/item/:id')
 app.use('/:id', (req, res) => {
   res.send(html);
 });
-app.use('/:id/styles.css', express.static('../public/styles.css'));
+//app.use('/:id/styles.css', express.static('../public/styles.css'));
 
 app.listen(PROXY_PORT, () => {
   console.log(`App listening on port ${PROXY_PORT}`);
